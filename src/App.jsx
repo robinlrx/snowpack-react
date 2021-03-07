@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import '@styles/App.scss';
 
 function App() {
 	// Create the count state.
@@ -12,9 +11,9 @@ function App() {
 	}, [count, setCount]);
 	// Return the App component.
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
+		<div className='App'>
+			<header className='App-header'>
+				<img src='./img/logo.svg' className='App-logo' alt='logo' />
 				<p>
 					Edit <code>src/App.jsx</code> and save to reload.
 				</p>
@@ -22,12 +21,7 @@ function App() {
 					Page has been open for <code>{count}</code> seconds.
 				</p>
 				<p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
 						Learn React
 					</a>
 				</p>
