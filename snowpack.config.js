@@ -26,5 +26,6 @@ module.exports = {
 		// only for import
 		"@components": "./src/components",
 		"@styles": "./src/styles",
+		"@pages": "./src/pages",
 	}
 };

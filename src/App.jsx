@@ -1,32 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import '@styles/App.scss';
+import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
+import '@styles/index.scss';
+import Home from '@pages/Home';
+import About from '@pages/About';
 
 function App() {
-	// Create the count state.
-	const [count, setCount] = useState(0);
-	// Create the counter (+1 every second).
-	useEffect(() => {
-		const timer = setTimeout(() => setCount(count + 1), 1000);
-		return () => clearTimeout(timer);
-	}, [count, setCount]);
-	// Return the App component.
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<img src='./img/logo.svg' className='App-logo' alt='logo' />
-				<p>
-					Edit <code>src/App.jsx</code> and save to reload.
-				</p>
-				<p>
-					Page has been open for <code>{count}</code> seconds.
-				</p>
-				<p>
-					<a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-						Learn React
-					</a>
-				</p>
-			</header>
-		</div>
+		<>
+			<Router>
+				<nav>
+					<NavLink exact to="/" className='nav-link' activeClassName="selected">Home</NavLink>
+					<NavLink exact to="/about" className='nav-link' activeClassName="selected">About</NavLink>
+				</nav>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route exact path='/about' component={About} />
+				</Switch>
+			</Router>
+		</>
 	);
 }
 
