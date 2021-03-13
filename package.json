@@ -1,4 +1,8 @@
 {
+	"name": "snowpack-react",
+	"version": "0.1.0",
+	"homepage": "https://github.com/robinlrx/snowpack-react#readme",
+	"author": "Robin",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
